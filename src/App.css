@@ -3,3 +3,10 @@ body {
   padding: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+
+.App {
+  background: rgb(93, 173, 234);
+  height: 100vh;
+  padding: 1px;
+  font-family: "Lato", sans-serif;
+}
