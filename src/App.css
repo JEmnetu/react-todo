@@ -10,3 +10,26 @@ body {
   padding: 1px;
   font-family: "Lato", sans-serif;
 }
+
+#main-heading {
+  text-align: center;
+}
+
+#todo-list {
+  width: 400px;
+  height: auto;
+  margin: auto;
+  padding: 5px;
+  border-radius: 3px;
+  background: rgb(228, 217, 217);
+}
+
+.todo {
+  padding: 3px 10px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
