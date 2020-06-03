@@ -26,10 +26,24 @@ body {
 
 .todo {
   padding: 3px 10px;
+  margin-bottom: 5px;
   background: white;
   border-radius: 4px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#completeBtn {
+  background: greenyellow;
+  font-weight: bold;
+  margin-right: 6px;
+  border-radius: 6px;
+}
+
+#deleteBtn {
+  background: rgb(255, 0, 0);
+  font-weight: bold;
+  border-radius: 6px;
 }
