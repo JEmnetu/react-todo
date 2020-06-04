@@ -14,7 +14,14 @@ function App() {
   const addTodo = (text) => {
     let newTodos = [...todos, { text: text, isCompleted: false }];
     setTodos(newTodos);
-    console.log(text);
+
+    localStorage.setItem("todos", JSON.stringify(newTodos));
+  };
+
+  const completeTodo = (index) => {
+    let newTodos = [...todos];
+    newTodos[index].isCompleted = true;
+    setTodos(newTodos);
     localStorage.setItem("todos", JSON.stringify(newTodos));
   };
 
@@ -23,7 +30,12 @@ function App() {
       <h1 id="main-heading">Todo Application</h1>
       <div id="todo-list">
         {todos.map((todo, index) => (
-          <Todo todo={todo} index={index} />
+          <Todo
+            todo={todo}
+            index={index}
+            key={index}
+            completeTodo={completeTodo}
+          />
         ))}
         <TodoForm addTodo={addTodo} />
       </div>
