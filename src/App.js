@@ -29,7 +29,9 @@ function App() {
     let newTodos = [...todos];
 
     if (newTodos[index].isCompleted === false) {
-      let c = window.confirm("Are you sure you want to delete?");
+      let c = window.confirm(
+        "This task has not been completed. Are you sure you want to delete?"
+      );
       if (c === false) {
         return;
       }
