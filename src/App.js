@@ -42,7 +42,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1 id="main-heading">Todo Application</h1>
+      <h1 id="main-heading">
+        {todos.length === 0
+          ? "Not much going on today, eh?"
+          : "Let's get these done!"}
+      </h1>
       <div id="todo-list">
         {todos.map((todo, index) => (
           <Todo
