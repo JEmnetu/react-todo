@@ -4,7 +4,7 @@ import Todo from "./component/Todo";
 import TodoForm from "./component/TodoForm";
 
 function App() {
-  const [todos, setTodos] = useState([{ text: "Todo", isCompleted: false }]);
+  const [todos, setTodos] = useState([]);
 
   useEffect(() => {
     let storedTodos = JSON.parse(localStorage.getItem("todos"));
