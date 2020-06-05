@@ -47,3 +47,7 @@ body {
   font-weight: bold;
   border-radius: 6px;
 }
+
+.todo-btns button {
+  border: solid 2px;
+}
