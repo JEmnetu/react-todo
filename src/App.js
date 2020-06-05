@@ -25,6 +25,21 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(newTodos));
   };
 
+  const deleteTodo = (index) => {
+    let newTodos = [...todos];
+
+    if (newTodos[index].isCompleted === false) {
+      let c = window.confirm("Are you sure you want to delete?");
+      if (c === false) {
+        return;
+      }
+    }
+
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+    localStorage.setItem("todos", JSON.stringify(newTodos));
+  };
+
   return (
     <div className="App">
       <h1 id="main-heading">Todo Application</h1>
@@ -35,6 +50,7 @@ function App() {
             index={index}
             key={index}
             completeTodo={completeTodo}
+            deleteTodo={deleteTodo}
           />
         ))}
         <TodoForm addTodo={addTodo} />
